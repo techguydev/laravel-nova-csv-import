@@ -10,6 +10,7 @@ use Laravel\Nova\Http\Requests\NovaRequest;
 use SimonHamp\LaravelNovaCsvImport\Importer;
 use Illuminate\Validation\ValidationException;
 use Laravel\Nova\Fields\Field;
+use Illuminate\Support\Str;
 
 class ImportController
 {
@@ -73,6 +74,11 @@ class ImportController
     public function getAvailableResourcesForImport(NovaRequest $request) {
 
         $novaResources = collect(Nova::authorizedResources($request));
+
+        // avoiding data that is not part of nova
+        $novaResources = $novaResources->filter(function ($value, $key) {
+            return Str::contains($value, 'App\Nova');;
+        });
 
         return $novaResources->filter(function ($resource) use ($request) {
                     if ($resource === ActionResource::class) {
