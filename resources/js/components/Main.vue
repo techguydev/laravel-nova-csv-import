@@ -1,7 +1,7 @@
 <template>
     <div>
         <heading class="mb-6">Importación Masiva</heading>
-        <p class="mb-6"><a target="_blank" href="https://www.youtube.com/watch?v=lvGoPc8lCHs&t=37s">Video tutorial</a> </p>
+        <p class="mb-6"><a target="_blank" href="https://www.youtube.com/watch?v=lvGoPc8lCHs">Video tutorial</a> </p>
 
         <card class="flex flex-col items-center justify-center" style="min-height: 300px">
             <input type="file" name="file" ref="file" @change="handleFile">
