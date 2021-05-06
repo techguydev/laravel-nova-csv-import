@@ -1193,7 +1193,7 @@ var render = function() {
                 attrs: { disabled: _vm.disabledImport, id: "run-import" },
                 on: { click: _vm.runImport }
               },
-              [_vm._v("Import → ")]
+              [_vm._v("Importar → ")]
             )
           ])
         ]

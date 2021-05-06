@@ -47,7 +47,7 @@
 
             <div class="bg-30 flex px-8 py-4">
                 <!--<button class="btn btn-default">&leftarrow; Cancel</button>-->
-                <button class="btn btn-default btn-primary" @click="runImport" :disabled="disabledImport" id="run-import">Import &rightarrow; </button>
+                <button class="btn btn-default btn-primary" @click="runImport" :disabled="disabledImport" id="run-import">Importar &rightarrow; </button>
             </div>
         </card>
     </div>
