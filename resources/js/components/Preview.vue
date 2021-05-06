@@ -1,24 +1,24 @@
 <template>
     <div>
-        <heading class="mb-6">CSV Import</heading>
+        <heading class="mb-6">Importación Masiva</heading>
 
         <card class="flex flex-col" style="min-height: 300px">
             <div class="p-8">
-                <h2 class="pb-4">Preview</h2>
+                <h2 class="pb-4">Previsualización</h2>
                 <p class="pb-4">
-                    We were able to discover <b>{{ headings.length }}</b> column(s) and <b>{{ total_rows }}</b>
-                    row(s) in your data.
+                    Pudimos descubrir <b>{{ headings.length }}</b> Columnas(s) y <b>{{ total_rows }}</b>
+                    fila(s) en tus datos.
                 </p>
                 <p class="pb-4">
-                    Choose a resource to import them into and match up the headings from the CSV to the
-                    appropriate fields of the resource.
+                    Seleccione un recurso para importarlos y hacer match con el encabezado de su archivo y los campos
+                    apropiados de la base de datos.
                 </p>
 
-                <h2 class="py-4">Resource</h2>
-                <p class="pb-4">Choose which resource to import your data into:</p>
+                <h2 class="py-4">Recurso</h2>
+                <p class="pb-4"> Seleccione cual recurso decidas importar:</p>
                 <div>
                     <select name="resource" class="block form-control form-select" v-model="resource">
-                        <option value="">- Select a resource -</option>
+                        <option value="">- Seleccione-</option>
                         <option v-for="(label, index) in resources" :value="index">{{ label }}</option>
                     </select>
                 </div>

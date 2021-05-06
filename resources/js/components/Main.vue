@@ -1,10 +1,10 @@
 <template>
     <div>
-        <heading class="mb-6">CSV Import</heading>
+        <heading class="mb-6">Importación Masiva</heading>
 
         <card class="flex flex-col items-center justify-center" style="min-height: 300px">
             <input type="file" name="file" ref="file" @change="handleFile">
-            <button type="submit" class="btn btn-default btn-primary" @click="upload">Import</button>
+            <button type="submit" class="btn btn-default btn-primary" @click="upload">Importar</button>
         </card>
     </div>
 </template>

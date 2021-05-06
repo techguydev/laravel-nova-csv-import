@@ -3,9 +3,8 @@
         <heading class="mb-6">CSV Import</heading>
 
         <card class="flex flex-col items-center justify-center" style="min-height: 300px">
-            <h1 class="pb-4">Done!</h1>
-            <p class="pb-4">All your data was successfully imported.</p>
-            <a href="/nova/csv-import/">Upload more</a>
+            <h1 class="pb-4">Hecho!</h1>
+            <p class="pb-4">Toda tu data fue importada exitosamente.</p>
         </card>
     </div>
 </template>
