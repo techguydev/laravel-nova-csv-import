@@ -3,7 +3,7 @@
         <heading class="mb-6">Importación Masiva</heading>
         <p class="mb-6"><a target="_blank" href="https://www.youtube.com/watch?v=lvGoPc8lCHs">Video tutorial</a> </p>
 
-        <p class="mb-6"><a href="https://sistrack.net/docs/files/modelo_carga.xlsx">Baja aqui la plantilla de ejemplo</a> </p>
+        <p class="mb-6"><a href="https://sistrack.net/downloadtemplate">Baja aqui la plantilla de ejemplo</a> </p>
 
         <card class="flex flex-col items-center justify-center" style="min-height: 300px">
             <input type="file" name="file" ref="file" @change="handleFile">
