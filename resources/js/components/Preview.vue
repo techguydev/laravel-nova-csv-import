@@ -78,7 +78,7 @@ export default {
 
                   // Set the default resource to the first one
                   if (self.resources.length > 0) {
-                    self.resource = Object.keys(self.resources)[0];
+                    self.resource = Object.keys(self.resources)[1];
                 }
             });
 
