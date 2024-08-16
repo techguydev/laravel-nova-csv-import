@@ -10,12 +10,12 @@
                     fila(s) en tus datos.
                 </p>
                 <p class="pb-4">
-                    Seleccione un recurso para importarlos y hacer match con el encabezado de su archivo y los campos
-                    apropiados de la base de datos.
+                    Seleccione un recurso para importar y hacer match con el encabezado de su archivo y los campos
+                    apropiados de la base de datos, puede hacer scroll horizontal para ver todas los datos.
                 </p>
 
                 <h2 class="py-4">Recurso</h2>
-                <p class="pb-4"> Seleccione cual recurso decidas importar:</p>
+                <p class="pb-4"> Seleccione:</p>
                 <div>
                     <select name="resource" class="block form-control form-select" v-model="resource">
                         <option value="">- Seleccione-</option>
@@ -35,7 +35,7 @@
                 <tbody>
                     <tr>
                         <td v-for="heading in headings" class="text-center">
-                            <select class="w-full form-control form-select" v-model="mappings[heading]">
+                            <select class="w-auto form-control form-select" v-model="mappings[heading]">
                                 <option value="">- Ignorar esta columna -</option>
                                 <option v-for="field in fields[resource]" :value="field.attribute">{{ field.name }}</option>
                             </select>
