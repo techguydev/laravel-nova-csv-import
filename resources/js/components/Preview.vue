@@ -24,6 +24,8 @@
                 </div>
             </div>
 
+            <div style="overflow-x: auto;">
+
             <table class="table w-full">
                 <thead>
                     <tr>
@@ -34,7 +36,7 @@
                     <tr>
                         <td v-for="heading in headings" class="text-center">
                             <select class="w-full form-control form-select" v-model="mappings[heading]">
-                                <option value="">- Ignore this column -</option>
+                                <option value="">- Ignorar esta columna -</option>
                                 <option v-for="field in fields[resource]" :value="field.attribute">{{ field.name }}</option>
                             </select>
                         </td>
@@ -45,6 +47,7 @@
                 </tbody>
             </table>
 
+            </div>
             <div class="bg-30 flex px-8 py-4">
                 <!--<button class="btn btn-default">&leftarrow; Cancel</button>-->
                 <button class="btn btn-default btn-primary" @click="runImport" :disabled="disabledImport" id="run-import">Importar &rightarrow; </button>
@@ -78,7 +81,7 @@ export default {
             rows: [],
             resources: [],
             fields: [],
-            resource: '',
+            resource: 0,
             mappings: {},
         };
     },
