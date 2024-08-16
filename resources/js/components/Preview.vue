@@ -19,7 +19,6 @@
                 <p class="pb-4"> Seleccione:</p>
                 <div>
                     <select name="resource" class="block form-control form-select" v-model="resource">
-                        <option value="">- Seleccione-</option>
                         <option v-for="(label, index) in resources" :value="index">{{ label }}</option>
                     </select>
                 </div>
@@ -78,7 +77,7 @@ export default {
 
                   // Set the default resource to the first one
                   if (self.resources.length > 0) {
-                    self.resource = Object.keys(self.resources)[1];
+                    self.resource = Object.keys(self.resources)[0];
                 }
             });
 
