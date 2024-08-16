@@ -147,6 +147,10 @@ export default {
                         button.innerHTML = 'Import &rightarrow;';
                         button.removeAttribute("disabled");
                         self.$toasted.show('Tuvimos problemas importando la data, revisa el documento e intenalo nuevamente', {type: "error"});
+                
+                        const errorMessage = response.data.message || 'Tuvimos problemas importando la data, revisa el documento e intenalo nuevamente';
+                        self.$toasted.show(errorMessage, {type: "error"});
+
                     }
                 });
 

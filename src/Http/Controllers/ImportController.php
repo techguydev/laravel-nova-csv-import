@@ -120,7 +120,8 @@ class ImportController
             ->setResource($resource)
             ->setAttributes($attributes)
             ->setAttributeMap($attribute_map)
-            ->setRules($rules)
+            ->set
+            Rules($rules)
             ->setModelClass($model_class)
             ->import($this->getFilePath($file), null);
 
