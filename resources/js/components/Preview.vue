@@ -75,10 +75,14 @@ export default {
                     self.$set(self.mappings, heading, "");
                 });
 
-                  // Set the default resource to the first one
-                  if (self.resources.length > 0) {
+                 // Set the default resource to the first one
+            if (self.resources.length > 0) {
+                self.resource = Object.keys(self.resources)[0];
+                self.$nextTick(() => {
                     self.resource = Object.keys(self.resources)[0];
-                }
+                });
+            }
+            
             });
 
     },
