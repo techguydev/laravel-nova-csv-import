@@ -146,13 +146,16 @@ export default {
                     } else {
                         button.innerHTML = 'Import &rightarrow;';
                         button.removeAttribute("disabled");
-                        self.$toasted.show('Tuvimos problemas importando la data, revisa el documento e intenalo nuevamente', {type: "error"});
-                
-                        const errorMessage = response.data.message || 'Tuvimos problemas importando la data, revisa el documento e intenalo nuevamente';
+                        const errorMessage = response.data.errors ? response.data.errors.join(', ') : 'Tuvimos problemas importando la data, revisa el documento e intenalo nuevamente';
                         self.$toasted.show(errorMessage, {type: "error"});
-
                     }
-                });
+                })
+                .catch(function (error) {
+                button.innerHTML = 'Import &rightarrow;';
+                button.removeAttribute("disabled");
+                const errorMessage = error.response && error.response.data && error.response.data.message ? error.response.data.message : 'Tuvimos problemas importando la data, revisa el documento e intenalo nuevamente';
+                self.$toasted.show(errorMessage, {type: "error"});
+            });
 
             // this.$router.push({name: 'csv-import-review', params: {file: this.file, resource: this.resource}});
         },
