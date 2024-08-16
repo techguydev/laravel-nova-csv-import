@@ -50,7 +50,7 @@
             </table>
 
             </div>
-            <div class="bg-30 flex px-8 py-4">
+            <div class="bg-30 flex px-8 py-4 justify-end">
                 <!--<button class="btn btn-default">&leftarrow; Cancel</button>-->
                 <button class="btn btn-default btn-primary" @click="runImport" :disabled="disabledImport" id="run-import">Importar &rightarrow; </button>
             </div>
