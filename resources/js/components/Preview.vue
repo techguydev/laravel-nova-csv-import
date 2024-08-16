@@ -75,7 +75,13 @@ export default {
                 self.headings.forEach(function (heading) {
                     self.$set(self.mappings, heading, "");
                 });
+
+                  // Set the default resource to the first one
+                  if (self.resources.length > 0) {
+                    self.resource = Object.keys(self.resources)[0];
+                }
             });
+
     },
     data() {
         return {
@@ -83,7 +89,7 @@ export default {
             rows: [],
             resources: [],
             fields: [],
-            resource: 1,
+            resource: "",
             mappings: {},
         };
     },
