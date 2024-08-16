@@ -139,7 +139,7 @@ export default {
                 .post(this.url('import/' + this.file), data)
                 .then(function (response) {
                     if (response.data.result === 'success') {
-                        self.$toasted.show('Datos Importados!', {type: "success"});
+                        self.$toasted.show('¡Datos Importados!', {type: "success"});
                         self.$router.push({name: 'csv-import-review', params: {file: self.file, resource: self.resource}});
                     } else {
                         button.innerHTML = 'Import &rightarrow;';
