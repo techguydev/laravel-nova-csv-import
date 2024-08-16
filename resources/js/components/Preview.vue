@@ -18,6 +18,7 @@
                 <p class="pb-4"> Seleccione cual recurso decidas importar:</p>
                 <div>
                     <select name="resource" class="block form-control form-select" v-model="resource">
+                        <option value="">- Seleccione-</option>
                         <option v-for="(label, index) in resources" :value="index">{{ label }}</option>
                     </select>
                 </div>
