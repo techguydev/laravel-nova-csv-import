@@ -11,7 +11,8 @@
                 </p>
                 <p class="pb-4">
                     Seleccione un recurso para importar y hacer match con el encabezado de su archivo y los campos
-                    apropiados de la base de datos, puede hacer scroll horizontal para ver todas los datos.
+                    apropiados de la base de datos, puede hacer scroll horizontal para ver todas los datos. A continuación mostramos
+                    un ejemplo de como se verá la data importada.
                 </p>
 
                 <h2 class="py-4">Recurso</h2>
@@ -40,7 +41,7 @@
                                 <option v-for="field in fields[resource]" :value="field.attribute">{{ field.name }}</option>
                             </select>
                         </td>
-                        
+
                     </tr>
                     <tr v-for="row in rows">
                         <td v-for="col in row">{{ col }}</td>
@@ -82,7 +83,7 @@ export default {
             rows: [],
             resources: [],
             fields: [],
-            resource: 0,
+            resource: 1,
             mappings: {},
         };
     },
